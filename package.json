@@ -1,0 +1,17 @@
+{
+  "name": "test-cborld",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@digitalbazaar/cborld": "^7.2.0",
+    "@digitalcredentials/security-document-loader": "^6.0.1",
+    "activitystreams-context": "^3.1.0"
+  }
+}

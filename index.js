@@ -18,9 +18,11 @@ const jsonldDocument = {
 const cborldBytes = await encode({ jsonldDocument, documentLoader });
 console.log(cborldBytes);
 
+//decode to get back what we put in
 const obj = await decode({ cborldBytes, documentLoader })
 console.log(obj);
 
+// rountripping fails due to missing '#' in namespace
 const c = await encode({ obj, documentLoader });
 console.log(c);
 

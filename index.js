@@ -1,14 +1,14 @@
 import { encode, decode } from '@digitalbazaar/cborld';
-import { securityLoader } from '@digitalcredentials/security-document-loader';
+import { JsonLdDocumentLoader } from 'jsonld-document-loader';
 
 const contextObject = {"@context": {"ex": "https://example.com/my-context/v1#", "type": "@type", "Note": "ex:Note", "summary": "ex:summary", "content": "ex:content"}};
 
-const loader = securityLoader()
-loader.addStatic('https://example.com/my-context/v1', contextObject)
+const loader = new JsonLdDocumentLoader();
+loader.addStatic('https://example.com/my-context/v1#', contextObject)
 const documentLoader = loader.build();
 
 const jsonldDocument = {
-  '@context': 'https://example.com/my-context/v1',
+  '@context': 'https://example.com/my-context/v1#',
   type: 'Note',
   summary: 'CBOR-LD',
   content: 'CBOR-LD is awesome!'

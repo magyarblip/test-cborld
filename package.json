@@ -12,7 +12,7 @@
   "description": "",
   "dependencies": {
     "@digitalbazaar/cborld": "^7.2.0",
-    "@digitalcredentials/security-document-loader": "^6.0.1",
-    "activitystreams-context": "^3.1.0"
+    "activitystreams-context": "^3.1.0",
+    "jsonld-document-loader": "^2.3.0"
   }
 }

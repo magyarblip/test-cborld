@@ -17,7 +17,7 @@ loader.addStatic(CONTEXT_URL, CONTEXT)
 const myLoader = loader.build();
 
 const myDocument = {
-  '@context': 'https://example.com/my-context/v1',
+  '@context': CONTEXT_URL,
   type: 'Note',
   label: 'CBOR-LD',
   content: 'CBOR-LD is awesome!'

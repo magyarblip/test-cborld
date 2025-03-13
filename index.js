@@ -35,7 +35,7 @@ const reencodedOptions = {
   jsonldDocument: roundtripJsonLdDocument,
   documentLoader: myLoader
 }
-// rountripping fails due to missing '#' in namespace
+// re-roundtripping
 const reencodedCborldBytes = await encode(reencodedOptions);
 console.log(reencodedCborldBytes);
 

@@ -22,7 +22,11 @@ console.log(cborldBytes);
 const roundtripJsonLdDocument = await decode({ cborldBytes, documentLoader })
 console.log(roundtripJsonLdDocument);
 
+const reencodedOptions = {
+  jsonldDocument: roundtripJsonLdDocument,
+  documentLoader: documentLoader
+}
 // rountripping fails due to missing '#' in namespace
-const reencodedCborldBytes = await encode({ roundtripJsonLdDocument, documentLoader });
+const reencodedCborldBytes = await encode(reencodedOptions);
 console.log(reencodedCborldBytes);
 

@@ -48,12 +48,7 @@ describe('cborld encode', () => {
             const myCborldBytes = await encode({ jsonldDocument: myDocument, documentLoader: myLoader });
             // console.log(myCborldBytes);
 
-            // Problem is this is bound to the original context URL, rather than its namespace
-            // How do i inspect the CBOR data in a context neutral way
-            // const output = await decode2(myCborldBytes);
-            // console.log(output);
-
-
+            // This would enable a v2 consumer to load a v1 object directly into v2 form
             const altLoader = _loadContext(CONTEXT_URL, ALT_CONTEXT);
             const roundtripJsonLdDocument = await decode({ cborldBytes: myCborldBytes, documentLoader: altLoader })
             // console.log(roundtripJsonLdDocument);

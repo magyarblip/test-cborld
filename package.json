@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env NODE_ENV=test mocha tests/*.spec.js --require chai/register-expect.js",
     "exec": "node index.js"
   },
   "type": "module",
@@ -13,6 +13,12 @@
   "dependencies": {
     "@digitalbazaar/cborld": "^7.2.0",
     "activitystreams-context": "^3.1.0",
+    "cbor2": "^1.12.0",
     "jsonld-document-loader": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^11.1.0"
   }
 }
